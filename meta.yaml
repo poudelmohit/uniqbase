@@ -1,0 +1,47 @@
+package:
+  name: uniqbase
+  version: 1.0.0
+
+source:
+  path: .
+
+build:
+  number: 0
+  script: |
+    mkdir -p $PREFIX/bin
+    cp bin/* $PREFIX/bin
+    chmod +x $PREFIX/bin/*
+
+requirements:
+
+requirements:
+  build:
+    - python >=3.8
+    - bioconda::mafft
+    - bioconda::seqtk
+    - bioconda::emboss
+    - bioconda::entrez-direct
+  run:
+    - python >=3.8
+    - bioconda::mafft
+    - bioconda::seqtk
+    - bioconda::emboss
+    - bioconda::entrez-direct
+    - pandas
+  
+test:
+  commands:
+    - fetch_seq.sh -h
+    - align.sh
+    - realign.sh
+    - uniq_base_pos.py --help
+    - calculate_composition.py --help
+
+about:
+  home: https://github.com/poudelmohit/uniqbase
+  license: MIT
+  license_file: LICENSE
+  summary: "A bioinformatics tool for species identification based on unique nucleotide positions."
+  description: |
+    UniqBase is a bioinformatics tool designed to identify species from sequence data
+    using diagnostic nucleotide positions.
