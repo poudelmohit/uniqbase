@@ -21,7 +21,8 @@ Clone the repository:
     git clone https://github.com/poudelmohit/uniqbase.git
     cd uniqbase
     chmod +x bin/*
-    pip install -r requirements.txt
+    conda env create -f environment.yml
+    conda activate uniqbase
 
 ### Usage
 
