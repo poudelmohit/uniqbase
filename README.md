@@ -89,7 +89,7 @@ Example:
 
 ### Acknowledgments
 
-[**Alavarado-Serrano LAB, Ohio Univesity**](https://alvarado-s.weebly.com)
+[**Alvarado-Serrano Lab, Ohio University**](https://alvarado-s.weebly.com)
 ![Logo](https://github.com/poudelmohit/portfolio/blob/main/assets/lablogo-small.png)
 
 ### Developed By
